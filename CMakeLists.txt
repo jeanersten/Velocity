@@ -12,6 +12,7 @@ FetchContent_Declare(SFML
     SYSTEM)
 FetchContent_MakeAvailable(SFML)
 
-add_executable(velocity src/main.cpp)
+add_executable(velocity src/main.cpp
+                        src/game.cpp)
 target_compile_features(velocity PRIVATE cxx_std_23)
 target_link_libraries(velocity PRIVATE SFML::Graphics)
