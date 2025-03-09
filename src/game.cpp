@@ -2,11 +2,14 @@
 
 #include <SFML/Graphics.hpp>
 
+Game::Game()
+  : window(sf::VideoMode({640u, 480u}), "Velocity Engine v0.1")
+{
+  window.setFramerateLimit(60u);
+}
+
 void Game::run()
 {
-  auto window = sf::RenderWindow(sf::VideoMode({640, 480}), "Velocity Engine v0.1");
-  window.setFramerateLimit(60);
-
   while (window.isOpen())
   {
     while (const std::optional event = window.pollEvent())
